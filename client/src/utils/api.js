@@ -2,13 +2,12 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://expense-tracker-oihk.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Request interceptor — token attach korbe automatically
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -20,7 +19,6 @@ API.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor — 401 hole logout
 API.interceptors.response.use(
   (response) => response,
   (error) => {
