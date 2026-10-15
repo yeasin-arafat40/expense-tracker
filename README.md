@@ -123,7 +123,7 @@ expense-tracker/
 **Yeasin Arafat**
 
 - GitHub: [@yeasin-arafat40](https://github.com/yeasin-arafat40)
-- LinkedIn: [your-linkedin](www.linkedin.com/in/yeasin-arafat-237a7834a)
+- LinkedIn: [your-linkedin](https://www.linkedin.com/in/yeasin-arafat-237a7834a)
 - Email: yeasin4376@gmail.com
 
 ---
