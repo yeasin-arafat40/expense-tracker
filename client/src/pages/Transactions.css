@@ -1,0 +1,122 @@
+/* client/src/pages/Transactions.css */
+.transactions-page {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tx-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tx-header h1 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.tx-header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.tx-add-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tx-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+.tx-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr auto;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tx-filters select,
+.tx-filters input {
+  padding: 0.65rem 0.85rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.tx-filters select:focus,
+.tx-filters input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.tx-clear-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tx-clear-btn:hover {
+  background: #e5e7eb;
+}
+
+.tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tx-empty {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tx-empty p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.tx-loading {
+  padding: 3rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .tx-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tx-filters {
+    grid-template-columns: 1fr;
+  }
+}

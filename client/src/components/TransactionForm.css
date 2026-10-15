@@ -1,0 +1,114 @@
+/* client/src/components/TransactionForm.css */
+.tx-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tx-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.tx-type-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.tx-type-btn {
+  padding: 0.85rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.tx-type-btn.active.expense {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.tx-type-btn.active.income {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.tx-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tx-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tx-group input,
+.tx-group select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.tx-group input:focus,
+.tx-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.tx-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.tx-btn-cancel,
+.tx-btn-submit {
+  flex: 1;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.tx-btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.tx-btn-cancel:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.tx-btn-submit {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.tx-btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+.tx-btn-submit:disabled,
+.tx-btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

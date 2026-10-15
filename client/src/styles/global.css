@@ -1,0 +1,252 @@
+/* client/src/styles/global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+  --primary: #6366f1;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+}
+
+body.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --border-light: #1e293b;
+  --primary: #818cf8;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --input-bg: #0f172a;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* Dark Mode Global Overrides */
+body.dark .stat-card,
+body.dark .chart-card,
+body.dark .recent-section,
+body.dark .tx-card,
+body.dark .budget-card,
+body.dark .profile-card,
+body.dark .profile-stat,
+body.dark .modal-content,
+body.dark .auth-card,
+body.dark .tx-empty,
+body.dark .dashboard-placeholder {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+  color: var(--text-primary);
+}
+
+body.dark p,
+body.dark .stat-label,
+body.dark .tx-date,
+body.dark .tx-note,
+body.dark .progress-text,
+body.dark .category-status {
+  color: var(--text-secondary);
+}
+
+body.dark .layout,
+body.dark .dashboard,
+body.dark .transactions-page,
+body.dark .budget-page,
+body.dark .profile-page {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark .sidebar {
+  background: var(--bg-card);
+  border-right-color: var(--border);
+}
+
+body.dark .sidebar-link {
+  color: var(--text-secondary);
+}
+
+body.dark .sidebar-link:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: var(--text-muted);
+}
+
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus {
+  border-color: var(--primary);
+}
+
+body.dark .modal-overlay { background: rgba(0, 0, 0, 0.7); }
+body.dark .modal-header { border-bottom-color: var(--border); }
+body.dark .modal-close { color: var(--text-secondary); }
+body.dark .modal-close:hover { background: var(--bg-primary); color: var(--text-primary); }
+
+body.dark .tx-clear-btn,
+body.dark .tx-btn-cancel {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark .tx-clear-btn:hover,
+body.dark .tx-btn-cancel:hover {
+  background: var(--border);
+}
+
+body.dark .tx-icon-btn:hover { background: var(--bg-primary); }
+body.dark .stat-icon,
+body.dark .profile-stat-icon { background: var(--bg-primary); }
+
+body.dark .category-budget-item {
+  border-color: var(--border);
+  background: var(--bg-primary);
+}
+
+body.dark .category-budget-item input {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark .budget-input-group input,
+body.dark .budget-summary {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark .summary-row { color: var(--text-secondary); }
+body.dark .summary-row strong { color: var(--text-primary); }
+
+body.dark .month-picker {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark .progress-bar,
+body.dark .mini-progress { background: var(--bg-primary); }
+
+body.dark .tx-filters select,
+body.dark .tx-filters input {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark .tx-type-btn {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+body.dark .tx-type-btn.active.expense {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+body.dark .tx-type-btn.active.income {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+body.dark .auth-card { background: var(--bg-card); }
+body.dark .auth-header h1 { color: var(--text-primary); }
+body.dark .auth-header p { color: var(--text-secondary); }
+
+body.dark .form-group input,
+body.dark .profile-group input {
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+body.dark .form-group label,
+body.dark .profile-group label {
+  color: var(--text-primary);
+}
+
+body.dark .auth-footer { color: var(--text-secondary); }
+
+/* ═══════════════════════════════════════════
+   SMOOTH DARK MODE TRANSITION
+   ═══════════════════════════════════════════ */
+
+body,
+body *,
+body *::before,
+body *::after {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Element with transform hover — all transition */
+.tx-card,
+.stat-card,
+.profile-stat,
+.sidebar-link,
+.toast,
+.tx-add-btn,
+.budget-save-btn,
+.profile-btn,
+.auth-btn,
+.tx-btn-submit,
+.logout-btn,
+.theme-toggle {
+  transition: all 0.3s ease;
+}
+
+/* Progress bar fill smooth */
+.progress-fill,
+.mini-progress-fill {
+  transition: width 0.8s ease-out, background-color 0.3s ease;
+}

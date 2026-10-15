@@ -1,0 +1,133 @@
+/* client/src/components/TransactionCard.css */
+.tx-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border-left: 4px solid #e5e7eb;
+}
+
+.tx-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.tx-card.income {
+  border-left-color: #10b981;
+}
+
+.tx-card.expense {
+  border-left-color: #ef4444;
+}
+
+.tx-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.tx-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.tx-icon.income {
+  background: #ecfdf5;
+}
+
+.tx-icon.expense {
+  background: #fef2f2;
+}
+
+.tx-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.tx-info h4 {
+  font-size: 0.95rem;
+  color: #1f2937;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+}
+
+.tx-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tx-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.15rem;
+}
+
+.tx-card-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tx-amount {
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tx-amount.income {
+  color: #10b981;
+}
+
+.tx-amount.expense {
+  color: #ef4444;
+}
+
+.tx-actions-btns {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tx-icon-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.tx-icon-btn:hover {
+  background: #f3f4f6;
+}
+
+.tx-icon-btn.delete:hover {
+  background: #fee2e2;
+}
+
+@media (max-width: 500px) {
+  .tx-actions-btns {
+    flex-direction: column;
+  }
+  .tx-amount {
+    font-size: 0.9rem;
+  }
+}

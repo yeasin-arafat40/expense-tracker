@@ -1,0 +1,22 @@
+/* client/src/components/Layout.css */
+.layout {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.layout-body {
+  display: flex;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .layout-content {
+    padding: 1.25rem;
+  }
+}

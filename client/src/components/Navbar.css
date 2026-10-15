@@ -1,0 +1,138 @@
+/* client/src/components/Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  padding: 0.85rem 1.5rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.menu-btn:hover {
+  background: var(--bg-primary);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.logo-icon { font-size: 1.5rem; }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: var(--bg-primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.05);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.theme-toggle {
+  background: var(--bg-primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.05);
+}
+
+/* Icon rotate animation */
+.theme-toggle:active {
+  transform: rotate(360deg) scale(0.95);
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+  .logo-text { display: none; }
+  .user-name { display: none; }
+  .logout-btn { padding: 0.5rem 0.75rem; font-size: 0.8rem; }
+}
