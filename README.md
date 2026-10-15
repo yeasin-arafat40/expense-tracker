@@ -5,7 +5,13 @@ A full-stack MERN application for personal finance management — track income, 
 ### 🌐 [Live Demo](https://expensetrackeryeasin.netlify.app) · 📁 [Source Code](https://github.com/yeasin-arafat40/expense-tracker)
 
 ---
+## 📸 Screenshots
 
+### 📊 Dashboard
+![Dashboard](./screenshot/dashboard.png)
+
+### profile
+![Dark Mode](./screenshot/profile.png)
 ## ✨ Features
 
 - 🔐 **Authentication** — Register/Login with JWT + bcrypt
